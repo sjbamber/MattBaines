@@ -5,9 +5,10 @@ using System.Web;
 using System.Data.Entity;
 using System.Web.Security;
 using MattBaines.Data;
+using Devtalk.EF.CodeFirst;
 
 
-    public class DataContextInitializer : DropCreateDatabaseIfModelChanges<DataContext>
+public class DataContextInitializer : DontDropDbJustCreateTablesIfModelChanged<DataContext>
     {
         protected override void Seed(DataContext context)
         {
