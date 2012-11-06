@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var controller_name = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+    var action_name = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();    
+}
+@section StyleSheet {
+    @RenderSection("StyleSheet", required: false)
+}
+@section JavaScript {
+    @RenderSection("JavaScript", required: false)
+}
+
+<div id="wrapper">
+    <div id="header">
+        <div id="title">
+            <a href="/"><img src="@Url.Content("~/Content/images/logo.jpg")" alt="Matt Baines" /></a>
+        </div>
+
+        <div id="menucontainer">
+            <ul id="menu" class="dropdown">
+                <li><a class="parent" href="#">Links</a>
+        		    <ul class="sub_menu">
+                         <li><a href="#">Link 1</a></li>
+                         <li class="last"><a href="#">Link 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="sidebar">
+            <ul>
+                <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative", "Index", "AdvertisingCreative")</li>
+                <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "Index", "WorkILike")</li>
+                <li><a href="http://mattbaines.blogspot.co.uk/" target="_blank">My Blog</a></li>
+                <li><a href="http://thebackdroptoadventure.tumblr.com/" target="_blank">"Backdrop to Adventure"</a></li>
+            </ul>
+            @RenderSection("Sidebar", false)
+        </div>
+        <div id="container">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+@Html.Partial("~/Views/Shared/_Footer.cshtml")

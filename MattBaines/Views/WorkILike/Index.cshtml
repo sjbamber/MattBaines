@@ -1,0 +1,16 @@
+﻿@model List<WorkILike>
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";    
+    ViewBag.Title = "Advertising Creative";
+}
+
+<h2>WORK I LIKE FROM MY MA IN PROFESSIONAL WRITING</h2>
+
+@foreach (var WILobject in Model)
+{
+    <div class="WorkILikeEntry">
+        <p><strong>@WILobject.Type</strong></p>
+        <p><a href="@Url.Action("Details", new { ID = WILobject.Id })" style="display:inline-block;padding:10px;">@WILobject.Title</a><span> - @WILobject.Course - @WILobject.Year</span></p>
+        <p>@WILobject.Summary</p>
+    </div>
+}

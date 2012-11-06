@@ -1,0 +1,86 @@
+﻿/* LOGON PAGE
+----------------------------------------------------------*/
+
+body
+{
+    background: #EEE;   
+}
+
+#logon_header 
+{
+    padding:20px;
+    background: #FFF;
+    border-bottom: 5px solid #3E83C9;
+    margin-bottom: 60px;
+}
+
+#logon_header img
+{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+#logon_main
+{
+    
+}
+
+#logon_container
+{
+    width: 350px;
+    background: #FFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#logon_container input[type="text"],
+#logon_container input[type="password"]
+{
+    width: 330px;
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+#logon_container label
+{
+    font-weight: bold;
+}
+
+#logon_container input[type="submit"]
+{
+    display: block;
+    width: 80px;
+    margin: 10px auto 10px auto;
+}
+
+.logon_extra 
+{
+    padding: 10px 0 0 0;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.logon_extra input
+{
+    margin: 0;
+}
+
+.logon_extra label, .logon_extra a
+{
+    font-weight: normal !important;
+    color: #999;
+    text-decoration: underline;
+}
+
+.logon_extra label:hover, .logon_extra a:hover
+{
+    text-decoration: none;
+}
+
+footer, #footer 
+{
+    margin:0;
+}

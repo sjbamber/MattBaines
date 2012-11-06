@@ -1,0 +1,809 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style-position:inside;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS START
+----------------------------------------------------------*/
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+}
+
+body 
+{
+    min-width: 800px;
+    background-color: #FFF;
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #696969;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    position: relative
+}
+footer, 
+#footer 
+{
+    height: 50px;
+}
+#footer-content {
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+.push {
+    height: 50px;
+    clear: both;
+}
+
+a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #1d60ff;
+}
+
+p, ul {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+strong
+{
+    font-weight:900 !important;
+}
+
+em
+{
+    font-style:italic !important;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+    padding-bottom: 20px;
+}
+
+h3 
+{
+    color: #3E83C9;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+header, #header {
+    margin-bottom: 0px;
+    background: #FFF;
+    color: #000;
+    padding: 0;
+    height: 75px;
+    border-bottom: 5px solid #3E83C9;
+}
+
+footer, 
+#footer 
+{
+    clear: both;
+    color: #999;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 0 220px;
+    font-size: .9em;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu 
+{
+    padding: 0;
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a 
+{
+    height: 20px;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #e8eef4;
+    color: #333;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul#menu li a:hover, ul#menu li.hover a.parent {
+    background-color: #0078AE;
+    color: #FFF;
+    text-decoration: none;
+}
+
+ul#menu li a:active {
+    background-color: #026890;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* SIDEBAR AND CONTENT
+----------------------------------------------------------*/
+
+#main #sidebar
+{
+    position: absolute;
+    left: 0;
+    top: 80px;
+    bottom: 0px;
+    width: 220px;
+    background: #EAF0F6 url('./images/dashboard/separation-line.png') right 0px repeat-y;
+    min-height: 500px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+}
+
+#main #container
+{
+    margin-left: 220px;
+    background: #FFF;
+    padding:10px;
+}
+
+#main #sidebar ul
+{
+    list-style-type: none;
+}
+
+#main #sidebar ul li
+{
+    display: block;
+    height: 35px;
+    padding: 0 0 0 20px;
+    border-bottom: 1px solid #EAF0F6;
+    border-top: 1px solid #EAF0F6;
+    margin-right: 1px;
+    font-weight: bold;
+}
+
+#main #sidebar ul li.selected {
+    background: #d8dfea;
+    color: #666;
+    border-bottom: 1px solid #c4cde4;
+    border-top: 1px solid #c4cde4;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+#main #sidebar ul li:hover
+{
+    background: #f1f3f8;
+    border-bottom: 1px solid #c4cde4;
+    border-top: 1px solid #c4cde4;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+#main #sidebar ul li a
+{
+    line-height: 35px;
+    text-decoration: none;
+    display: block;
+    color: #666;
+    width: 100%;
+    height: 100%;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.1em;
+    color: #444;
+    width: 200px;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+input[type="submit"], .button 
+{
+    color: #fff !important;
+    font-size: 12px !important;
+    padding: 10px !important;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 140px;
+}
+
+.button_small span
+{
+    padding: 2px 10px !important;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.button span
+{
+    padding: 0 !important;
+}
+
+/* FORM LAYOUT CUSTOM  
+----------------------------------------------------------*/
+
+#divMainWrapper
+{
+    margin: 1%;
+    width: 98%;
+
+}
+
+.divRowWrapper, .divRowWrapperActive
+{   
+    width: 100%; 
+    font-size: 1.1em;
+    float: left;
+    margin: 0px 0px 20px -10px;        
+    border: 1px solid #efefee;
+    padding: 10px;
+}
+.divRowWrapperActive
+{
+    background: #dfefff;
+    border: 1px solid #c2d7ef;
+}
+.col1, .col2, .col3
+{
+    width: 30%;  
+    margin-right:3%;          
+    float: left;
+    position: relative;
+}
+.col1
+{
+    z-index: 3000;
+}
+
+#divMainWrapper
+label
+{
+    display: block;
+    font-size: 1.2em;   
+    line-height: 1em;
+    padding: 0px 0px 7px 0px;
+    margin: 0px 0px 0px 0px;        
+}
+.checkbox-label label
+{
+    text-align: center;
+}
+
+.col1 label span, .col2 label span
+{
+    color: #a4a4a5;
+    font-size: 1.1em;
+}
+.divRowWrapper input, .divRowWrapperActive input,
+.divRowWrapper select, .divRowWrapperActive select
+{  
+    height: 33px;        
+    padding: 0px 0px 0px 2px;
+    margin: 0px;
+    background: #fff;        
+    width: 100%;
+}
+
+.reportFormField
+{
+    float: left;
+    width: 200px;
+    padding: 10px;
+}
+
+.reportFormField label
+{
+    font-weight: bold;
+    display: block;
+}
+
+.reportFormField input, .reportFormField select
+{
+    display: block;
+}
+
+.displayFieldWrapper
+{
+    width:98%;
+    padding: 10px;
+    float:left;
+    font-size: 1.2em;
+    border: 1px solid #efefee;    
+}
+
+.displayFieldWrapper label
+{
+    font-weight: bold;
+}
+
+.enquiry_view_field 
+{
+    float:left;
+    padding: 0 5px 15px 0;
+}
+
+.enquiry_view_field label
+{
+    display: block;
+    font-weight: bold;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+    vertical-align:top;
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    color: #fff;
+    background-color: #40a0c9;
+    border: 0;
+}
+
+table.listview 
+{
+    width:100%; 
+    font-size: 1.2em; 
+    margin-bottom: 10px;
+}
+
+table.grid th
+{
+    font-weight: bold;
+    text-align: center; 
+}
+
+table.grid th.ui-state-default
+{
+    border: 0 !important;
+    background: none;
+    background-color: #3b9ec7;
+}
+
+table.grid
+{ 
+    width: 100%; 
+}
+
+table.grid p
+{ 
+    margin:0;
+}
+
+.grid td 
+{
+    text-align: center;
+}
+
+.gridrow_alternate
+{
+    background: #E8EEF4;
+}
+
+.dataTables_length
+{
+    clear:both;
+    float:left;
+    margin-bottom: 5px;
+}
+
+.dataTables_filter
+{
+    float:right;
+    margin-bottom: 5px;
+}
+
+.dataTables_paginate a
+{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mceEditor > table {
+    width: 100% !important;
+}
+
+.mceIframeContainer 
+{
+    background: #fff !important;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav, 
+#menucontainer 
+{
+    margin-top: 30px;
+    float:right;
+}
+
+.navigation_links
+{
+    float: right;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;  
+}
+
+div#title a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+div#title img
+{
+    padding:7px;
+}
+
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    height: 15px;
+    padding: 10px;
+}
+
+#logindisplay a:link {
+    text-decoration: underline;
+}
+
+#logindisplay a:visited {
+    text-decoration: underline;
+}
+
+#logindisplay a:hover {
+    color: #3E83C9;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-errors li {
+    list-style: none;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+/* Styles for inline editing
+----------------------------------------------------------*/
+
+.edit { 
+display: none; 
+} 
+
+.editing .edit { 
+display: block; 
+} 
+
+.editing .view { 
+display: none; 
+}​
+
+/* Pager
+----------------------------------------------------------*/
+
+.pager
+{
+margin: 8px 3px;
+padding: 3px;
+float: right;
+clear: right;
+}
+
+.pager .disabled
+{
+border: 1px solid #ddd;
+color: #999;
+margin-top: 4px;
+padding: 3px;
+text-align: center;
+}
+
+.pager .current
+{
+background-color: #1E86C3;
+border: 1px solid #6e99aa;
+color: #fff;
+font-weight: bold;
+margin-top: 4px;
+padding: 3px 5px;
+text-align: center;
+}
+
+.pager span, .pager a
+{
+margin: 4px 3px;
+}
+
+.pager a
+{
+border: 1px solid #aaa;
+padding: 3px 5px;
+text-align: center;
+text-decoration: none;
+}
+
+/* HOME PAGE
+----------------------------------------------------------*/
+.home_table_wrapper
+{
+    padding-bottom: 30px;
+}
+
+/* Drop down menu
+----------------------------------------------------------*/
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; }
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; z-index:3000; }
+ul.dropdown li a                    { display: block; width: 150px;text-align: center; }
+ul.dropdown li.hover,
+ul.dropdown li:hover                { position: relative; }
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 100%; visibility: hidden; position: absolute; top: 100%; left: 0; }						  
+ul.dropdown ul li a					{ border-right: none; -webkit-border-top-left-radius: 0 !important;-moz-border-radius-topleft: 0 !important;border-top-left-radius: 0 !important;
+                   					  -webkit-border-top-right-radius: 0 !important;-moz-border-radius-topright: 0 !important;border-top-right-radius: 0 !important; }
+
+.sub_menu li.last a                  { -webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px; }
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+/* WorkILike
+----------------------------------------------------------*/
+
+.WorkILikeEntry 
+{
+    width: 400px;
+    float:left;
+    padding: 10px;
+    margin: 3px;
+    border: 4px solid #e66;
+    height: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.workilike_sidebarlink
+{
+    display:inline-block;
+    border: 2px solid #c66;
+    margin:5px;
+    padding:10px;
+    width:180px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;    
+}

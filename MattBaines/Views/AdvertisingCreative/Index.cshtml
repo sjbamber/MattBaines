@@ -1,0 +1,18 @@
+﻿@model MattBaines.Models.AdvertisingCreativeModel
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";    
+    ViewBag.Title = "Advertising Creative";
+}
+
+<h2>Advertising Creative</h2>
+
+@foreach (var category in Model.Categories)
+{
+    <p><div style="height:20px;width:20px;display:inline-block;background-color:@category.Colour"></div>
+    @category.Name</p>
+}
+
+@foreach (var ACobject in Model.Objects)
+{
+    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="display:inline-block;background-color:@ACobject.Category.Colour;padding:10px;">@ACobject.Title</a>
+}

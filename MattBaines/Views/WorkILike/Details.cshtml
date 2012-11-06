@@ -1,0 +1,19 @@
+﻿@model MattBaines.Models.WorkILikeModel
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";    
+    ViewBag.Title = "Advertising Creative";
+}
+
+@section Sidebar {
+<div>
+    @foreach (var wil in Model.WorkILikeEntries) {
+                <a href="@Url.Action("Details", new { ID = wil.Id })" class="workilike_sidebarlink">@wil.Title</a>
+    }
+</div>
+}
+@Html.ActionLink("Back", "Index")
+<h2>@Model.workILikeObject.Title</h2>
+
+
+@Html.Raw(Model.workILikeObject.Summary)
+

@@ -1,0 +1,22 @@
+﻿@model MattBaines.Models.AdvertisingCreativeModel
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";    
+    ViewBag.Title = "Advertising Creative";
+}
+
+@section Sidebar {
+    @foreach (var category in Model.Categories) {
+        <div>
+        @foreach (var ACobject in Model.Objects.Where(x => x.Category == category))
+        {
+            <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="display:inline-block;background-color:@ACobject.Category.Colour;padding:10px;">@ACobject.Title</a>
+        }
+        </div>
+    }
+}
+@Html.ActionLink("Back", "Index")
+<h2>@Model.ACObject.Title</h2>
+
+
+@Html.Raw(Model.ACObject.Content)
+

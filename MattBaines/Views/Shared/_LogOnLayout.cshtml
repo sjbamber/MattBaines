@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section StyleSheet {
+    <link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("StyleSheet", required: false)
+}
+@section JavaScript {
+    @RenderSection("JavaScript", required: false)
+}
+
+<div id="logon_header">
+   <img src="@Url.Content("~/Content/images/dayinsureLogo.jpg")" alt="Dayinsure Logo" />
+</div>
+<div id="logon_main">
+    @RenderBody()
+</div>
+@Html.Partial("~/Views/Shared/_Footer.cshtml")
