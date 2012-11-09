@@ -11,7 +11,7 @@
 }
 
 <div id="wrapper">
-    <div id="header">
+   @* <div id="header">
         <div id="title">
             <a href="/"><img src="@Url.Content("~/Content/images/logo.jpg")" alt="Matt Baines" /></a>
         </div>
@@ -26,9 +26,12 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div>*@
     <div id="main">
         <div id="sidebar">
+            <div id="title">
+                <a style="padding-bottom:10px; border-top: 1px solid #CCC;border-bottom: 1px solid #CCC;" href="/"><img src="@Url.Content("~/Content/images/logo.png")" alt="Matt Baines" /></a>
+            </div>
             <ul>
                 <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative", "Index", "AdvertisingCreative")</li>
                 <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "Index", "WorkILike")</li>

@@ -19,23 +19,23 @@ using MattBaines.Data;
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "BBH Shanghai",
-                Colour = "#2222FF"
+                Colour = "#d0605c"
             });
 
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "TBWA London",
-                Colour = "#FF2222"
+                Colour = "#d0605c"
             });
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "Momentum Manchester",
-                Colour = "#22FF22"
+                Colour = "#70c4cb"
             });
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "Proactive Work",
-                Colour = "#22FFFF"
+                Colour = "#e9fd09"
             });
 
             foreach (var category in Categories)
