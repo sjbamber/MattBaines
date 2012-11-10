@@ -17,6 +17,7 @@ using System.ComponentModel.DataAnnotations;
 
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public string ImagePath { get; set; }
 
         public virtual AdvertisingCreativeCategory Category { get; set; }
 

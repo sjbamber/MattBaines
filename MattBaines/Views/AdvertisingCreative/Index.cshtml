@@ -6,13 +6,17 @@
 
 <h2>Advertising Creative</h2>
 
+<ul class="category_list">
 @foreach (var category in Model.Categories)
 {
-    <p><div style="height:20px;width:20px;display:inline-block;background-color:@category.Colour"></div>
-    @category.Name</p>
+    <li><div style="height:20px;width:20px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:@category.Colour"></div>
+    @category.Name</li>
 }
+</ul>
 
+<div class="clear">
 @foreach (var ACobject in Model.Objects)
 {
-    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="display:inline-block;background-color:@ACobject.Category.Colour;padding:10px;">@ACobject.Title</a>
+    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="height:200px;width:200px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background: @ACobject.Category.Colour;"><img style="opacity:0.4;filter:alpha(opacity=40)" src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a>
 }
+</div>

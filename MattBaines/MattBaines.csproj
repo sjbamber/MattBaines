@@ -76,6 +76,7 @@
     <Compile Include="Context\DataContext.cs" />
     <Compile Include="Context\DataContextInitializer.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdvertisingCreativeController.cs" />
     <Compile Include="Controllers\WorkILikeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -99,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Account.css" />
+    <Content Include="Content\images\AdvertisingCreative\Sprite_logo.gif" />
     <Content Include="Content\images\dashboard\separation-line.png" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\logo.png" />
@@ -217,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\WorkILike\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -47,24 +47,28 @@ using MattBaines.Data;
             {
                 Title = "Work 1",
                 Content = "<h1>Work 1</h1>",
+                ImagePath = "Sprite_logo.gif",
                 Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 2",
                 Content = "<h1>Work 2</h1>",
+                ImagePath = "Sprite_logo.gif",
                 Category = Categories[1]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 3",
                 Content = "<h1>Work 3</h1>",
+                ImagePath = "Sprite_logo.gif",
                 Category = Categories[2]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 4",
                 Content = "<h1>Work 4</h1>",
+                ImagePath = "Sprite_logo.gif",
                 Category = Categories[2]
             });
 
