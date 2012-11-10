@@ -17,6 +17,6 @@
 <div class="clear">
 @foreach (var ACobject in Model.Objects)
 {
-    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="height:200px;width:200px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background: @ACobject.Category.Colour;"><img style="opacity:0.4;filter:alpha(opacity=40)" src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a>
+    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="height:200px;width:200px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background: @ACobject.Category.Colour;"><img style="opacity:0.4;filter:alpha(opacity=40)" src="/Content/images/AdvertisingCreative/Sprite_logo.gif@*@ACobject.ImagePath*@" alt="@ACobject.ImagePath" /></a>
 }
 </div>

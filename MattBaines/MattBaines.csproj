@@ -80,6 +80,15 @@
     <Compile Include="Controllers\AdvertisingCreativeController.cs" />
     <Compile Include="Controllers\WorkILikeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Migrations\201211101720389_InitialCreate.cs" />
+    <Compile Include="Migrations\201211101720389_InitialCreate.Designer.cs">
+      <DependentUpon>201211101720389_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211101802181_ACObjectImagePath.cs" />
+    <Compile Include="Migrations\201211101802181_ACObjectImagePath.Designer.cs">
+      <DependentUpon>201211101802181_ACObjectImagePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WorkILikeModel.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Entities\AdvertisingCreativeCategory.cs" />
@@ -222,6 +231,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201211101720389_InitialCreate.resx">
+      <DependentUpon>201211101720389_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211101802181_ACObjectImagePath.resx">
+      <DependentUpon>201211101802181_ACObjectImagePath.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

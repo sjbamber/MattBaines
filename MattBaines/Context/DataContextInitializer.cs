@@ -7,7 +7,7 @@ using System.Web.Security;
 using MattBaines.Data;
 
 
-    public class DataContextInitializer : CreateDatabaseIfNotExists<DataContext>
+    public class DataContextInitializer : DropCreateDatabaseIfModelChanges<DataContext>
     {
         protected override void Seed(DataContext context)
         {
