@@ -6,7 +6,7 @@ using System.Web;
 namespace MattBaines.Data
 {
     public class DataAccess
-    {
+    { 
         private DataContext _db;
 
         public DataAccess()
