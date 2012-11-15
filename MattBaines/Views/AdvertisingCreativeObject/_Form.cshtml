@@ -1,0 +1,39 @@
+﻿@model AdvertisingCreativeObject
+@using MattBaines.Helpers
+
+<div id="divMainWrapper">
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.UpdatedDate)
+
+    <div class="divRowWrapperActive">
+            @Html.LabelFor(model => model.Title)
+            @Html.TextBoxFor(model => model.Title)
+    </div>
+
+    <div class="divRowWrapper textarea_tinymce">
+            @Html.LabelFor(model => model.Content)
+            @Html.EditorFor(model => model.Content)
+    </div>
+    <div class="divRowWrapper">
+        <div class="col1">
+            @Html.LabelFor(model => model.CategoryId, "Category")
+            @Html.DropDownListFor(model => model.CategoryId, Model.CategoryList.Select(v => new SelectListItem
+               {
+                   Text = HtmlHelpers.SplitCamelCase(v.Name.ToString()),
+                   Value = v.Id.ToString(),
+                   Selected = Model.Id.ToString() == v.Id.ToString()
+               }))
+        </div>
+    </div>
+    <div class="divRowWrapper">
+            @Html.LabelFor(model => model.ImagePath, "Image Path")
+            @Html.TextBoxFor(model => model.ImagePath)
+    </div>
+    <div class="clear"></div>
+    <input type="submit" value="Submit" />
+
+    <div id="ErrorNotification">
+        @Html.ValidationSummary(false)
+    </div>
+</div>

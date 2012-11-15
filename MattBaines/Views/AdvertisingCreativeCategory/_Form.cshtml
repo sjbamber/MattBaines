@@ -1,0 +1,27 @@
+﻿@model AdvertisingCreativeCategory
+
+<div id="divMainWrapper">
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.UpdatedDate)
+
+    <div class="divRowWrapperActive">
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+    </div>
+
+    <div class="divRowWrapper">
+        <div class="col1">
+            @Html.LabelFor(model => model.Colour)
+            @Html.TextBoxFor(model => model.Colour, new { @class = "colorpicker" })
+            <div class="colorwheel"></div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+    <input type="submit" value="Submit" />
+
+    <div id="ErrorNotification">
+        @Html.ValidationSummary(false)
+    </div>
+</div>

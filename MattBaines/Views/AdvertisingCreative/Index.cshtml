@@ -4,19 +4,24 @@
     ViewBag.Title = "Advertising Creative";
 }
 
-<h2>Advertising Creative</h2>
-
-<ul class="category_list">
-@foreach (var category in Model.Categories)
+<ul class="ACcategory_list">
+@foreach (var category in Model.Categories.OrderBy(x => x.Id))
 {
-    <li><div style="height:20px;width:20px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:@category.Colour"></div>
-    @category.Name</li>
+    <li><a style="background-color:@category.Colour !important;">@category.Name</a></li>
 }
 </ul>
-
-<div class="clear">
-@foreach (var ACobject in Model.Objects)
-{
-    <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="height:200px;width:200px;display:inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background: @ACobject.Category.Colour;"><img style="opacity:0.4;filter:alpha(opacity=40)" src="/Content/images/AdvertisingCreative/Sprite_logo.gif@*@ACobject.ImagePath*@" alt="@ACobject.ImagePath" /></a>
-}
+<div class="clear"></div>
+<div id="tj_container" class="tj_container">
+	<div class="tj_nav">
+		<span id="tj_prev" class="tj_prev">Previous</span>
+		<span id="tj_next" class="tj_next">Next</span>
+	</div>
+	<div class="tj_wrapper">
+		<ul class="tj_gallery">
+            @foreach (var ACobject in Model.Objects.OrderBy(x => x.CategoryId))
+            {
+                <li><a href="@Url.Action("Details", new { ID = ACobject.Id })" style="background-color: @ACobject.Category.Colour !important;"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
+            }
+        </ul>
+    </div>
 </div>

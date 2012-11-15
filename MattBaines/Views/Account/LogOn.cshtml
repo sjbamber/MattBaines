@@ -1,13 +1,9 @@
 ﻿@model MattBaines.Models.LogOnModel
 
 @{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
     ViewBag.Title = "Log On";
 }
-
-<h2>Log On</h2>
-<p>
-    Please enter your user name and password. @Html.ActionLink("Register", "Register") if you don't have an account.
-</p>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -16,8 +12,6 @@
 
 @using (Html.BeginForm()) {
     <div>
-        <fieldset>
-            <legend>Account Information</legend>
 
             <div class="editor-label">
                 @Html.LabelFor(m => m.UserName)
@@ -39,10 +33,9 @@
                 @Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe)
             </div>
-
+            <br />
             <p>
                 <input type="submit" value="Log On" />
             </p>
-        </fieldset>
     </div>
 }

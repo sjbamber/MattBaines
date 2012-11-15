@@ -105,7 +105,7 @@ using MattBaines.Data;
             });
 
             // Init Users and Roles
-            WebSecurity.Register("Demo", "123456", "demo@demo.com", true, "Demo", "Demo");
+            WebSecurity.Register("Admin", "Admin123", "demo@demo.com", true, "Demo", "Demo");
             Roles.CreateRole("Admin");
             Roles.AddUserToRole("Demo", "Admin");
         }

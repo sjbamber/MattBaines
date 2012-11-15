@@ -38,7 +38,7 @@ namespace MattBaines.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Admin");
                     }
                 }
                 else
@@ -53,7 +53,7 @@ namespace MattBaines.Controllers
 
         //
         // GET: /Account/LogOff
-
+        [Authorize]
         public ActionResult LogOff()
         {
             FormsAuthentication.SignOut();
@@ -63,7 +63,7 @@ namespace MattBaines.Controllers
 
         //
         // GET: /Account/Register
-
+        [Authorize]
         public ActionResult Register()
         {
             return View();
@@ -73,6 +73,7 @@ namespace MattBaines.Controllers
         // POST: /Account/Register
 
         [HttpPost]
+        [Authorize]
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)

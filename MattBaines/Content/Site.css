@@ -32,7 +32,9 @@ body {
 	line-height: 1;
 	background: #F9F9F9;
 }
-ol, ul {
+ol, ul 
+{
+    list-style:none;
 	list-style-position:inside;
 }
 blockquote, q {
@@ -59,11 +61,12 @@ html, body {
 
 body 
 {
-    min-width: 800px;
-    background-color: #FFF;
+    position:absolute;
+    background: whiteSmoke;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     color: #696969;
+    z-index: 0;
 }
 
 #wrapper {
@@ -72,14 +75,14 @@ body
     height: 100%;
     margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
     position: relative;
-    background: whiteSmoke;
-    z-index: 1;
+    z-index: 50;
 }
 footer, 
 #footer 
 {
     height: 50px;
-        z-index:9999;
+    position: relative;
+    z-index:9999;
 }
 #footer-content {
     height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
@@ -179,9 +182,8 @@ footer,
 {
     clear: both;
     color: #999;
-    text-align: center;
     line-height: normal;
-    margin: 0 0 0 220px;
+    margin: 0 0 0 20px;
     font-size: .9em;
     border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
@@ -249,7 +251,7 @@ ul#menu li.selected a {
 
 #main #sidebar
 {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0px;
@@ -259,12 +261,13 @@ ul#menu li.selected a {
     border-right: 1px dashed #CCC;
     min-height: 500px;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    z-index:9999;    
 }
 
 #main #container
 {
     margin-left: 241px;
-    padding:30px 10px 10px 30px;
+    padding:10px 10px 10px 30px;
 }
 
 #main #container h2
@@ -274,7 +277,8 @@ ul#menu li.selected a {
     text-transform: uppercase;
     font-size: 2em;
     padding: 0 0 5px 0;
-    margin-bottom: 30px;
+    margin: 0;
+    float:left;
 }
 
 #main #sidebar ul
@@ -383,15 +387,47 @@ input[type="submit"], .button
     padding: 0 !important;
 }
 
-.category_list
+ul.ACcategory_list, ul.ACobject_list
 {
     list-style:none;
 }
 
-ul.category_list li
+ul.ACcategory_list li, ul.ACobject_list li
 {
     float: left;
     padding: 10px;
+}
+
+ul.ACcategory_list li a
+{
+    padding:2px 8px;
+    display:inline-block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight:bold; 
+}
+
+ul.ACobject_list li a
+{
+    height:200px;
+    width:200px;
+    display:inline-block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+ul.ACobject_list li a img
+{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+}
+
+ul.ACobject_list li a img:hover
+{
+    opacity:1;
+    filter:alpha(opacity=100);
 }
 
 /* FORM LAYOUT CUSTOM  
@@ -612,6 +648,7 @@ nav,
 .navigation_links
 {
     float: right;
+    margin-bottom: 10px;
 }
 
 div#title {
@@ -650,6 +687,37 @@ div#title img
 #logindisplay a:hover {
     color: #3E83C9;
     text-decoration: none;
+}
+
+.logoff 
+{
+    float:right;
+    color: #696969;
+    margin: 5px 0 5px 20px;
+    
+}
+
+.logoff strong
+{
+    color: #D0605C;
+}
+
+.logoff a
+{
+    display: inline-block;
+    padding: 3px 5px;
+    background: #D0605C;
+    text-decoration:none;
+    color: whiteSmoke;
+    font-weight: bold;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;    
+}
+
+.logoff a:hover
+{
+    background: #70C4CB;
 }
 
 /* Styles for validation helpers

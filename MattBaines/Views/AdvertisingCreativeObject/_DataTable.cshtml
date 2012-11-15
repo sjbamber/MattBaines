@@ -1,0 +1,12 @@
+﻿@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Html
+@model List<AdvertisingCreativeObject>
+
+@Html.Grid(Model).Columns(col => {
+        col.For(p => Html.ActionLink(p.Title, "Details", "AdvertisingCreative", new { ID = p.Id }, null)).Named("Title").Encode(false);
+        col.For(p => p.Category.Name).Named("Category").Attributes(style => "width:100px;");
+        col.For(p => p.CreatedDate).Named("Created").Attributes(style => "width:100px;");
+        col.For(p => p.UpdatedDate).Named("Updated").Attributes(style => "width:100px;");
+        col.For(p => Html.ActionLink("Edit", "Edit", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "button_small" })).Encode(false).HeaderAttributes(style => "width:50px;");
+        col.For(p => Html.ActionLink("Delete", "Delete", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "button_small delete_button" })).Encode(false).HeaderAttributes(style => "width:50px;");
+}).Attributes(id => ViewData["id"]).Empty("No Categories Found")

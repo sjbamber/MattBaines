@@ -1,0 +1,16 @@
+﻿@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Html
+@model List<AdvertisingCreativeObject>
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.Title = "All Advertising Creative Articles";
+}
+
+<div class="navigation_links">
+        @Html.ActionLink("New Article", "Create", null, new { @class = "button_small" })
+        @Html.ActionLink("Admin Area", "Index", "Admin", null, new { @class = "button_small" })
+</div>
+
+<div class="data_table">
+    @Html.Partial("_DataTable",Model,new ViewDataDictionary { { "id", "acobjects" } })
+</div>

@@ -1,5 +1,10 @@
 ﻿<div id="footer">
     <div id="footer-content">
-        &copy Matt Baines @DateTime.Now.Year
+        <span style="position:relative;bottom:7px;">&copy Matt Baines @DateTime.Now.Year</span>
+    
+    @if (!Request.IsAuthenticated)
+    {
+        <a href="@Url.Action("LogOn", "Account")"><img src="../../Content/images/padlock-locked-icon.png" alt="Log In" /></a>
+    }
     </div>
 </div>

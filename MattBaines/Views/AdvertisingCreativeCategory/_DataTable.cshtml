@@ -1,0 +1,22 @@
+﻿@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Html
+@model List<AdvertisingCreativeCategory>
+           
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.colour_field').each(function () {
+            $(this).css('background', $(this).text());
+        });
+    });
+
+
+</script>
+
+@Html.Grid(Model).Columns(col => {
+        col.For(p => p.Name).Named("Name").Encode(false);
+        col.For(p => p.Colour).Named("Colour").Attributes(style => "width:100px;", @class => "colour_field");
+        col.For(p => p.CreatedDate).Named("Created").Attributes(style => "width:100px;");
+        col.For(p => p.UpdatedDate).Named("Updated").Attributes(style => "width:100px;");
+        col.For(p => Html.ActionLink("Edit", "Edit", "AdvertisingCreativeCategory", new { ID = p.Id }, new { @class = "button_small" })).Encode(false).HeaderAttributes(style => "width:50px;");
+        col.For(p => Html.ActionLink("Delete", "Delete", "AdvertisingCreativeCategory", new { ID = p.Id }, new { @class = "button_small delete_button" })).Encode(false).HeaderAttributes(style => "width:50px;");
+}).Attributes(id => ViewData["id"]).Empty("No Categories Found")

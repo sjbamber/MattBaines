@@ -1,0 +1,10 @@
+﻿@model AdvertisingCreativeObject
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.Title = "Edit Advertising Creative Object";
+}
+
+@using (Html.BeginForm("Edit"))
+{
+    @Html.Partial("_Form", Model)
+}

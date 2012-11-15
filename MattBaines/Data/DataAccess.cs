@@ -26,12 +26,53 @@ namespace MattBaines.Data
             return categories;
         }
 
+        public AdvertisingCreativeCategory GetAdvertisingCreativeCategoryByID(Guid ID)
+        {
+            AdvertisingCreativeCategory ACcategory = (from c in _db.AdvertisingCreativeCategories
+                                                  where c.Id == ID
+                                                  select c).FirstOrDefault();
+            return ACcategory;
+        }
+
         // Write
         public bool AddAdvertisingCreativeCategory(AdvertisingCreativeCategory category)
         {
             try
             {
                 _db.AdvertisingCreativeCategories.Add(category);
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateAdvertisingCreativeCategory(AdvertisingCreativeCategory ACcategory)
+        {
+            try
+            {
+                AdvertisingCreativeCategory ACcategoryToUpdate = _db.AdvertisingCreativeCategories.Find(ACcategory.Id);
+                _db.Entry(ACcategoryToUpdate).CurrentValues.SetValues(ACcategory);
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteAdvertisingCreativeCategory(Guid ID)
+        {
+            try
+            {
+                AdvertisingCreativeCategory acc = _db.AdvertisingCreativeCategories.Find(ID);
+                if (acc.Objects.Any())
+                    return false;
+                
+                _db.AdvertisingCreativeCategories.Remove(acc);
                 _db.SaveChanges();
                 return true;
             }
@@ -67,6 +108,37 @@ namespace MattBaines.Data
             try
             {
                 _db.AdvertisingCreativeObjects.Add(ACobject);
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateAdvertisingCreativeObject(AdvertisingCreativeObject ACobject)
+        {
+            try
+            {
+                AdvertisingCreativeObject ACobjectToUpdate = _db.AdvertisingCreativeObjects.Find(ACobject.Id);
+                _db.Entry(ACobjectToUpdate).CurrentValues.SetValues(ACobject);
+                ACobjectToUpdate.Category = ACobject.Category;
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteAdvertisingCreativeObjectByID(Guid ID)
+        {
+            try
+            {
+                AdvertisingCreativeObject ACobjectToDelete = _db.AdvertisingCreativeObjects.Find(ID);
+                _db.AdvertisingCreativeObjects.Remove(ACobjectToDelete);
                 _db.SaveChanges();
                 return true;
             }

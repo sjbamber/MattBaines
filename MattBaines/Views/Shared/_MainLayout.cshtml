@@ -41,6 +41,9 @@
             @RenderSection("Sidebar", false)
         </div>
         <div id="container">
+            <h2>@ViewBag.Title</h2>
+            @Html.Partial("_LogOnPartial")
+            <div class="clear" style="padding-bottom: 20px;"></div>
             @RenderBody()
         </div>
     </div>
