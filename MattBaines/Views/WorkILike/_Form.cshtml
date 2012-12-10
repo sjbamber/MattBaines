@@ -1,0 +1,38 @@
+﻿@model WorkILike
+@using MattBaines.Helpers
+
+<div id="divMainWrapper">
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.UpdatedDate)
+
+    <div class="divRowWrapperActive">
+            @Html.LabelFor(model => model.Title)
+            @Html.TextBoxFor(model => model.Title)
+    </div>
+
+    <div class="divRowWrapper textarea_tinymce">
+            @Html.LabelFor(model => model.Summary)
+            @Html.EditorFor(model => model.Summary)
+    </div>
+    <div class="divRowWrapper">
+        <div class="col1">
+            @Html.LabelFor(model => model.Type)
+            @Html.TextBoxFor(model => model.Type)
+        </div>
+        <div class="col2">
+            @Html.LabelFor(model => model.Course)
+            @Html.TextBoxFor(model => model.Course)
+        </div>
+        <div class="col3">
+            @Html.LabelFor(model => model.Year)
+            @Html.TextBoxFor(model => model.Year)
+        </div>
+    </div>
+    <div class="clear"></div>
+    <input type="submit" value="Submit" />
+
+    <div id="ErrorNotification">
+        @Html.ValidationSummary(false)
+    </div>
+</div>

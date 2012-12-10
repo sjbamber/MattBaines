@@ -7,7 +7,7 @@
 <ul class="ACcategory_list">
 @foreach (var category in Model.Categories.OrderBy(x => x.Id))
 {
-    <li><a style="background-color:@category.Colour !important;">@category.Name</a></li>
+    <li><a style="border:5px solid @category.Colour !important;">@category.Name</a></li>
 }
 </ul>
 <div class="clear"></div>

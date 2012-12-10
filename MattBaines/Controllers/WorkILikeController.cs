@@ -32,5 +32,37 @@ namespace MattBaines.Controllers
             return View(view_model);
         }
 
+        [Authorize]
+        public ActionResult List()
+        {
+            var wilobjects = _db.GetAllWorkILikeObjects();
+            return View(wilobjects);
+        }
+
+        [Authorize]
+        public ActionResult Create()
+        {
+            WorkILike wilobject = new WorkILike();
+            return View("Create", wilobject);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(WorkILike wilobject)
+        {
+            if (ModelState.IsValid)
+            {
+                if (_db.AddWorkILike(wilobject))
+                {
+                    TempData["Notice"] = "Article Created Successfully";
+                    return RedirectToAction("Details", "WorkILike", new { ID = wilobject.Id });
+                }
+                else
+                {
+                    TempData["Notice"] = "Article Creation Failed";
+                }
+            }
+            return View(wilobject);
+        }
     }
 }

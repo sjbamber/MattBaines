@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
     public class WorkILike
     {
@@ -15,6 +16,8 @@ using System.ComponentModel.DataAnnotations;
         public string Course { get; set; }
         public string Year { get; set; }
         [Required]
+        [UIHint("tinymce_jquery_simple"), AllowHtml]
+        [DataType(DataType.Html)]
         public string Summary { get; set; }
 
         public DateTime CreatedDate { get; set; }

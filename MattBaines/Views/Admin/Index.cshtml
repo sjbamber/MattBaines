@@ -7,10 +7,16 @@
 <fieldset>
 <legend>Advertising Creative</legend>
 <h3>Categories</h3>
-@Html.ActionLink("View All", "Index", "AdvertisingCreativeCategory")
-@Html.ActionLink("Create New", "Create", "AdvertisingCreativeCategory")
+@Html.ActionLink("View All", "Index", "AdvertisingCreativeCategory", null, new { @class = "button" })
+@Html.ActionLink("Create New", "Create", "AdvertisingCreativeCategory", null, new { @class = "button" })
 <h3>Articles</h3>
-@Html.ActionLink("View All", "Index", "AdvertisingCreativeObject")
-@Html.ActionLink("Create New", "Create", "AdvertisingCreativeObject")
+@Html.ActionLink("View All", "Index", "AdvertisingCreativeObject", null, new { @class = "button" })
+@Html.ActionLink("Create New", "Create", "AdvertisingCreativeObject", null, new { @class = "button" })
+</fieldset>
+
+<fieldset>
+<legend>Work I Like...</legend>
+@Html.ActionLink("View All", "List", "WorkILike", null, new { @class = "button" })
+@Html.ActionLink("Create New", "Create", "WorkILike", null, new { @class = "button" })
 </fieldset>
 

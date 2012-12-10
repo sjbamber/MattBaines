@@ -11,41 +11,39 @@
 }
 
 <div id="wrapper">
-   @* <div id="header">
-        <div id="title">
-            <a href="/"><img src="@Url.Content("~/Content/images/logo.jpg")" alt="Matt Baines" /></a>
-        </div>
-
-        <div id="menucontainer">
-            <ul id="menu" class="dropdown">
-                <li><a class="parent" href="#">Links</a>
-        		    <ul class="sub_menu">
-                         <li><a href="#">Link 1</a></li>
-                         <li class="last"><a href="#">Link 2</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>*@
-    <div id="main">
-        <div id="sidebar">
-            <div id="title">
-                <a style="padding-bottom:10px; border-top: 1px solid #CCC;border-bottom: 1px solid #CCC;" href="/"><img src="@Url.Content("~/Content/images/logo.png")" alt="Matt Baines" /></a>
+    <div id="header">
+        <div id="headercontainer">
+            <div id="headercontainerinner">
+                @*<a href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]">
+                    @System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]
+                </a>*@
+                <a id="email" class="icon" href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]"></a>
+                <a id="twitter" class="icon" href="#"></a>
+                <a id="linkedin" class="icon" href="#"></a>
             </div>
-            <ul>
-                <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative", "Index", "AdvertisingCreative")</li>
-                <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "Index", "WorkILike")</li>
-                <li><a href="http://mattbaines.blogspot.co.uk/" target="_blank">My Blog</a></li>
-                <li><a href="http://thebackdroptoadventure.tumblr.com/" target="_blank">"Backdrop to Adventure"</a></li>
-            </ul>
-            @RenderSection("Sidebar", false)
         </div>
-        <div id="container">
-            <h2>@ViewBag.Title</h2>
+        <div id="title">
+            <a href="/"><img src="@Url.Content("~/Content/images/Title.png")" alt="Matt Baines" /></a>
+        </div>    
+        @*<div id="menucontainer">
+            <div id="menucontainer_head"></div>
+            <div id="menucontainer_content">    
+                <ul id="menu">
+                    <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}><a href="javascript:void(0)" id="advertisingcreative_link">Advertising Creative</a></li>
+                    <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}><a href="javascript:void(0)" id="workilike_link">Work I Like</a></li>
+                    *@@*<li><a href="http://mattbaines.blogspot.co.uk/" target="_blank">My Blog</a></li>
+                    <li><a href="http://thebackdroptoadventure.tumblr.com/" target="_blank">More From Me</a></li>*@
+                    @*<li><a href="javascript:void(0)" id="morefromme_link">More From Me</a></li>
+                </ul>
+            </div>
+            <div id="menucontainer_foot" class="clear"></div>
+        </div>*@
+    </div>
+    <div id="main">
+            @*<h2>@ViewBag.Title</h2>
             @Html.Partial("_LogOnPartial")
-            <div class="clear" style="padding-bottom: 20px;"></div>
+            <div class="clear" style="padding-bottom: 20px;"></div>*@
             @RenderBody()
-        </div>
     </div>
     <div class="push"></div>
 </div>

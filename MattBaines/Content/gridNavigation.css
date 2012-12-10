@@ -1,10 +1,11 @@
 /* Thumbnail Effects Style */
 .tj_container{
-	width:720px;
+	width:900px;
 	height: 420px;
 	position:relative;
 	margin:30px auto;
 	z-index: 0;
+    clear:both;
 }
 .tj_nav{
 	position:absolute;
@@ -52,11 +53,7 @@
 .tj_wrapper ul li a{
 	outline:none;
 	display:block;
-	margin:5px;
-	padding: 7px;
-	-moz-box-shadow:2px 2px 4px #8e8e8e;
-	-webkit-box-shadow:2px 2px 4px #8e8e8e;
-	box-shadow:2px 2px 4px #8e8e8e;
+	margin:15px;
 }
 .tj_wrapper ul li a img{
 	display:block;
@@ -70,7 +67,7 @@
 	*/
 }
 .tj_wrapper ul li a img:hover{
-	opacity:0.8;
+	opacity:1.0;
 }
 
 /* Specific style for the examples */

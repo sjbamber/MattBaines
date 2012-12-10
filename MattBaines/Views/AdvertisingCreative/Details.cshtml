@@ -4,7 +4,7 @@
     ViewBag.Title = "Advertising Creative";
 }
 
-@section Sidebar {
+
     @foreach (var category in Model.Categories) {
         <div>
         @foreach (var ACobject in Model.Objects.Where(x => x.Category == category))
@@ -13,7 +13,7 @@
         }
         </div>
     }
-}
+
 @Html.ActionLink("Back", "Index")
 <h3>@Model.ACObject.Title</h3>
 

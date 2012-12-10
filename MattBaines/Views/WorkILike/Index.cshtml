@@ -4,11 +4,4 @@
     ViewBag.Title = "Work I Like From My MA In Professional Writing";
 }
 
-@foreach (var WILobject in Model)
-{
-    <div class="WorkILikeEntry">
-        <strong>@WILobject.Type</strong><br />
-        <p><a href="@Url.Action("Details", new { ID = WILobject.Id })" style="display:inline-block;">@WILobject.Title</a><span> - @WILobject.Course - @WILobject.Year</span></p>
-        <p>@WILobject.Summary</p>
-    </div>
-}
+@Html.Partial("~/Views/WorkILike/_WorkILike.cshtml", Model)

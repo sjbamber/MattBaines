@@ -1,0 +1,10 @@
+﻿@model WorkILike
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.Title = "Create New Work I Like Article";
+}
+
+@using (Html.BeginForm("Create"))
+{
+    @Html.Partial("_Form", Model)
+}

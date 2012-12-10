@@ -1,0 +1,14 @@
+﻿@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Html
+@model List<WorkILike>
+
+@Html.Grid(Model).Columns(col => {
+        col.For(p => p.Type).Named("Type").Attributes(style => "width:100px;");    
+        col.For(p => Html.ActionLink(p.Title, "Details", "WorkILike", new { ID = p.Id }, null)).Named("Title").Encode(false);
+        col.For(p => p.Course).Named("Course").Attributes(style => "width:100px;");
+        col.For(p => p.Year).Named("Year").Attributes(style => "width:100px;");
+        col.For(p => p.CreatedDate).Named("Created").Attributes(style => "width:100px;");
+        col.For(p => p.UpdatedDate).Named("Updated").Attributes(style => "width:100px;");
+        col.For(p => Html.ActionLink("Edit", "Edit", "WorkILike", new { ID = p.Id }, new { @class = "button_small" })).Encode(false).HeaderAttributes(style => "width:50px;");
+        col.For(p => Html.ActionLink("Delete", "Delete", "WorkILike", new { ID = p.Id }, new { @class = "button_small delete_button" })).Encode(false).HeaderAttributes(style => "width:50px;");
+}).Attributes(id => ViewData["id"]).Empty("No Articles Found")
