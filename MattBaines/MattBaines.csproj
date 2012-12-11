@@ -168,6 +168,7 @@
     <Content Include="Content\images\paper-tear.png" />
     <Content Include="Content\images\prev.png" />
     <Content Include="Content\images\runner.png" />
+    <Content Include="Content\images\section-main.jpg" />
     <Content Include="Content\images\social-icons.png" />
     <Content Include="Content\images\Title.png" />
     <Content Include="Content\jquery.wijmo-open.2.2.1.css" />
