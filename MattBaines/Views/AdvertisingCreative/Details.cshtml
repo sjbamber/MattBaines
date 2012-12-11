@@ -5,18 +5,19 @@
 }
 
 
-    @foreach (var category in Model.Categories) {
+@*    @foreach (var category in Model.Categories) {
         <div>
         @foreach (var ACobject in Model.Objects.Where(x => x.Category == category))
         {
             <a href="@Url.Action("Details", new { ID = ACobject.Id })" style="display:inline-block;background-color:@ACobject.Category.Colour;padding:10px;">@ACobject.Title</a>
         }
         </div>
-    }
-
-@Html.ActionLink("Back", "Index")
-<h3>@Model.ACObject.Title</h3>
+    }*@
+<div id="ac_details">
+@Html.ActionLink("Back", "Index", "Home", null, null, "advertisingcreative", null, new { @class = "btn btn-info btn-small" })
+<h2>@Model.ACObject.Title</h2>
 
 
 @Html.Raw(Model.ACObject.Content)
+</div>
 

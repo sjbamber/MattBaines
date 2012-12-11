@@ -64,5 +64,32 @@ namespace MattBaines.Controllers
             }
             return View(wilobject);
         }
+
+        [Authorize]
+        public ActionResult Edit(Guid ID)
+        {
+            WorkILike wil = _db.GetWorkILikeObjectByID(ID);
+            return View("Edit", wil);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Edit(WorkILike wil)
+        {
+            if (ModelState.IsValid)
+            {
+                wil.UpdatedDate = DateTime.Now;
+                if (_db.UpdateWorkILike(wil))
+                {
+                    TempData["Notice"] = "Article Updated Successfully";
+                    return RedirectToAction("Details", "WorkILike", new { ID = wil.Id });
+                }
+                else
+                {
+                    TempData["Notice"] = "Article Update Failed";
+                }
+            }
+            return View("Edit", wil);
+        }
     }
 }

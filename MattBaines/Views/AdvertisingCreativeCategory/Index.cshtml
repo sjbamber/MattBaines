@@ -2,13 +2,12 @@
 @using MvcContrib.UI.Html
 @model List<AdvertisingCreativeCategory>
 @{
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "All Advertising Creative Categories";
 }
-
 <div class="navigation_links">
-        @Html.ActionLink("New Category", "Create", null, new { @class = "button_small" })
-        @Html.ActionLink("Admin Area", "Index", "Admin", null, new { @class = "button_small" })
+        @Html.ActionLink("New Category", "Create", null, new { @class = "btn btn-info btn-small" })
+        @Html.ActionLink("Admin Area", "Index", "Admin", null, new { @class = "btn btn-info btn-small" })
 </div>
 
 <div class="data_table">

@@ -11,6 +11,11 @@
     </div>
 
     <div class="divRowWrapper">
+            @Html.LabelFor(model => model.ImagePath)
+            @Html.TextBoxFor(model => model.ImagePath)
+    </div>
+
+    <div class="divRowWrapper">
         <div class="col1">
             @Html.LabelFor(model => model.Colour)
             @Html.TextBoxFor(model => model.Colour, new { @class = "colorpicker" })

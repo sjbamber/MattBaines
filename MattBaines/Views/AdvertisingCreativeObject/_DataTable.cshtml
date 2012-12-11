@@ -7,6 +7,6 @@
         col.For(p => p.Category.Name).Named("Category").Attributes(style => "width:100px;");
         col.For(p => p.CreatedDate).Named("Created").Attributes(style => "width:100px;");
         col.For(p => p.UpdatedDate).Named("Updated").Attributes(style => "width:100px;");
-        col.For(p => Html.ActionLink("Edit", "Edit", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "button_small" })).Encode(false).HeaderAttributes(style => "width:50px;");
-        col.For(p => Html.ActionLink("Delete", "Delete", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "button_small delete_button" })).Encode(false).HeaderAttributes(style => "width:50px;");
-}).Attributes(id => ViewData["id"]).Empty("No Categories Found")
+        col.For(p => Html.ActionLink("Edit", "Edit", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "btn btn-info btn-small" })).Encode(false).HeaderAttributes(style => "width:50px;");
+        col.For(p => Html.ActionLink("Delete", "Delete", "AdvertisingCreativeObject", new { ID = p.Id }, new { @class = "btn btn-info btn-small delete_button" })).Encode(false).HeaderAttributes(style => "width:50px;");
+}).Attributes(id => ViewData["id"], @class => "table table-hover").Empty("No Categories Found")

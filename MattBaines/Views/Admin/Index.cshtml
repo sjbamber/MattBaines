@@ -1,22 +1,26 @@
 ﻿@model MattBaines.Models.AdvertisingCreativeModel
 @{
-    Layout = "~/Views/Shared/_MainLayout.cshtml";    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";    
     ViewBag.Title = "Admin Area";
 }
 
-<fieldset>
+<fieldset class="clear">
 <legend>Advertising Creative</legend>
-<h3>Categories</h3>
-@Html.ActionLink("View All", "Index", "AdvertisingCreativeCategory", null, new { @class = "button" })
-@Html.ActionLink("Create New", "Create", "AdvertisingCreativeCategory", null, new { @class = "button" })
-<h3>Articles</h3>
-@Html.ActionLink("View All", "Index", "AdvertisingCreativeObject", null, new { @class = "button" })
-@Html.ActionLink("Create New", "Create", "AdvertisingCreativeObject", null, new { @class = "button" })
+<div class="float" style="margin-right:30px;padding-bottom: 30px;">
+    <h4>Categories</h4>
+    @Html.ActionLink("View All", "Index", "AdvertisingCreativeCategory", null, new { @class = "button" })<br />
+    @Html.ActionLink("Create New", "Create", "AdvertisingCreativeCategory", null, new { @class = "button" })
+</div>
+<div class="float">
+    <h4>Articles</h4>
+    @Html.ActionLink("View All", "Index", "AdvertisingCreativeObject", null, new { @class = "button" })<br />
+    @Html.ActionLink("Create New", "Create", "AdvertisingCreativeObject", null, new { @class = "button" })
+</div>
 </fieldset>
 
 <fieldset>
 <legend>Work I Like...</legend>
-@Html.ActionLink("View All", "List", "WorkILike", null, new { @class = "button" })
+@Html.ActionLink("View All", "List", "WorkILike", null, new { @class = "button" })<br />
 @Html.ActionLink("Create New", "Create", "WorkILike", null, new { @class = "button" })
 </fieldset>
-
+<br />

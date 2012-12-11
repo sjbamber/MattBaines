@@ -88,6 +88,8 @@ $(document).ready(function () {
     $('.delete_button').click(function () {
         return confirm('Are you sure?');
     });
-    Cufon.replace('#advertisingcreative .section_title p, #advertisingcreative h4');
+    Cufon.replace('#advertisingcreative h4', { fontFamily: 'THURSTON_erc' });
+    Cufon.replace('#advertisingcreative .section_title p', { fontFamily: 'Sketch Block' });
+    Cufon.replace('#ac_details h2', { fontFamily: 'Sketch Block' });
 });
 

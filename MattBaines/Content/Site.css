@@ -11,7 +11,8 @@ html, body {
 body 
 {
     position:absolute;
-    background: url('/Content/images/background.jpg') #57B0B8;
+    background: url('/Content/images/background.jpg') #DEDCC3;
+    background-position:center top;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     color: #696969;
@@ -37,6 +38,8 @@ footer,
 #footer-content {
     height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
     padding: 8px;
+    text-align: center;
+    color: #000;
 }
 .push {
     height: 50px;
@@ -73,6 +76,7 @@ em
 
 header, #header {
     background: url('/Content/images/ornate_wallpaper.jpg') transparent;
+    background-position:center top;
     color: #000;
     padding: 0;
     width: 100%;
@@ -119,6 +123,12 @@ header, #header {
     background: transparent url('/Content/images/social-icons.png') 210px -246px;
 }
 
+#main 
+{
+    width: 995px;
+    margin: 0 auto;
+}
+
 footer, 
 #footer 
 {
@@ -138,7 +148,7 @@ ul#menu
 {
     padding: 0;
     margin: 0 auto;
-    width: 850px;
+    width: 950px;
     -webkit-border-bottom-right-radius: 10px;
 -webkit-border-bottom-left-radius: 10px;
 -moz-border-radius-bottomright: 10px;
@@ -168,6 +178,11 @@ ul#menu li a
     font-size: 24px;
     text-decoration: none;
     color: #c7504c;
+}
+
+ul#menu li a:hover, ul#menu li.selected a
+{
+    text-decoration: underline;
 }
 
 /* SIDEBAR AND CONTENT
@@ -454,6 +469,10 @@ label
     clear: both;
 }
 
+.float {
+    float:left;
+}
+
 .error {
     color: Red;
 }
@@ -468,18 +487,6 @@ label
 
 #menucontainer {
     
-}
-
-#menucontainer_head {
-    width:100%;
-    height: 64px;
-    background: url('/Content/images/section-head.png') transparent;
-}
-
-#menucontainer_foot {
-    width:100%;
-    height: 55px;
-    background: url('/Content/images/section-foot.png') transparent;
 }
 
 #menucontainer_content
@@ -498,8 +505,8 @@ label
 
 div#title {
     display: block;
-    padding-top: 105px;
-    padding-bottom: 20px;
+    padding-top: 115px;
+    padding-bottom: 60px;
     text-align: left;  
 }
 
@@ -514,11 +521,6 @@ div#title a
     height: 100%;
     width: 700px;
     margin: 0 auto;
-}
-
-div#title img
-{
-    padding:7px;
 }
 
 #logindisplay {
@@ -751,43 +753,47 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 
 #advertisingcreative {
-    width: 1024px;
+    width: 100%;
     margin: 0 auto;
 }
 
 #advertisingcreative .section_title p {
-    color: #dd4444;
-    font-size: 4em;
+    color: #555;
+    font-size: 5em;
     text-align: center;
 }
 
 
-.ac_object_list{
+.ac_object_list
+{
+    margin: 0 0 0 -240px;
+    padding: 0 0 0 240px;
     background: url('images/paper-tear.png') transparent no-repeat;
-    height: 650px;
-    width: 1024px;
+    height: 680px;
+    width: 995px;
 }
 
 #advertisingcreative h4 {
-    color: #D44;
-    margin-left: 30px;
-    font-size: 45px;
+    color: #555;
+    font-size: 3.5em;
+    text-transform: uppercase;
 }
 
 #advertisingcreative ul {
     list-style: none;
+    margin:0;
 }
 
 .ac_object_list ul{
     list-style: none;
     position: relative;
     top: 195px;
-    left: 175px;
+    left: 0px;
     margin-left: 25px;
 }
 
 .ac_object_list li{
-    margin-left: 5px;
+    margin-left: 15px;
     float: left;
 }
 
@@ -805,11 +811,54 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 	opacity: 0.8;
 }
 
-.ac_category.BBH_Shanghai h4 {
+.ac_category.BBH_Shanghai 
+{
+    margin-top: -70px;
+}
+
+.ac_category.Proactive_Work 
+{
+    margin-top: -40px;
+}
+
+.ac_category.BBH_Shanghai img.category_img, .ac_category.Proactive_Work img.category_img {
     position: relative;
-    top: 100px;
-    text-align: center;  
+    top: 120px;
+    left: 210px;
+    margin-left: -210px;
 }
 .ac_category {
     float: left;
+}
+
+.ac_object_small 
+{
+    width: 350px;
+    text-align: center;
+}
+
+.ac_object_small h4
+{
+    width: 250px;
+    margin: 0 auto;
+}
+
+.ac_category.TBWA_London 
+{
+    margin-right: 150px;
+}
+
+.ac_category.TBWA_London, .ac_category.Momentum_Manchester
+{
+    margin-top: -150px;
+}
+
+#admin_content 
+{
+    background: #dedcc3;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding:10px 20px 20px 20px;
+    margin: 10px;
 }

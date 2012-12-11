@@ -1,10 +1,10 @@
 ﻿@model WorkILike
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewBag.Title = "Create New Work I Like Article";
+    ViewBag.Title = "Edit Work I Like Article";
 }
 
-@using (Html.BeginForm("Create"))
+@using (Html.BeginForm("Edit"))
 {
     @Html.Partial("_Form", Model)
 }

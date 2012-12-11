@@ -2,13 +2,12 @@
 @using MvcContrib.UI.Html
 @model List<WorkILike>
 @{
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "All Work I Like Articles";
 }
-
 <div class="navigation_links">
-        @Html.ActionLink("New Article", "Create", null, new { @class = "button_small" })
-        @Html.ActionLink("Admin Area", "Index", "Admin", null, new { @class = "button_small" })
+        @Html.ActionLink("New Article", "Create", null, new { @class = "btn btn-info btn-small" })
+        @Html.ActionLink("Admin Area", "Index", "Admin", null, new { @class = "btn btn-info btn-small" })
 </div>
 
 <div class="data_table">

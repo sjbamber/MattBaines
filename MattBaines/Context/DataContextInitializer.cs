@@ -19,26 +19,34 @@ using MattBaines.Data;
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "BBH Shanghai",
-                Colour = "#d0605c"
+                Colour = "#d0605c",
+                SortOrder = 1,
+                ImagePath = "BBH.png"
             });
 
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "TBWA London",
-                Colour = "#d0605c"
+                Colour = "#d0605c",
+                SortOrder = 2,
+                ImagePath = "TBWA.png"
             });
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "Momentum Manchester",
-                Colour = "#70c4cb"
+                Colour = "#70c4cb",
+                SortOrder = 3,
+                ImagePath = "Momentum.png"
             });
             Categories.Add(new AdvertisingCreativeCategory()
             {
                 Name = "Proactive Work",
-                Colour = "#e9fd09"
+                Colour = "#e9fd09",
+                SortOrder = 4,
+                ImagePath = "Proactive.png"
             });
 
-            foreach (var category in Categories)
+            foreach (var category in Categories.OrderBy(x => x.SortOrder))
             {
                 _db.AddAdvertisingCreativeCategory(category);
             }
@@ -46,30 +54,58 @@ using MattBaines.Data;
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 1",
-                Content = "<h1>Work 1</h1>",
-                ImagePath = "Sprite_logo.gif",
+                Content = "<p>Work 1</p>",
+                ImagePath = "Sprite_logo.png",
                 Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 2",
-                Content = "<h1>Work 2</h1>",
-                ImagePath = "Sprite_logo.gif",
-                Category = Categories[1]
+                Content = "<p>Work 2</p>",
+                ImagePath = "Sprite_logo.png",
+                Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 3",
-                Content = "<h1>Work 3</h1>",
-                ImagePath = "Sprite_logo.gif",
-                Category = Categories[2]
+                Content = "<p>Work 3</p>",
+                ImagePath = "Sprite_logo.png",
+                Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Work 4",
-                Content = "<h1>Work 4</h1>",
-                ImagePath = "Sprite_logo.gif",
+                Content = "<p>Work 4</p>",
+                ImagePath = "Sprite_logo_rip.png",
+                Category = Categories[1]
+            });
+            _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
+            {
+                Title = "Work 5",
+                Content = "<p>Work 5</p>",
+                ImagePath = "Sprite_logo_rip.png",
                 Category = Categories[2]
+            });
+            _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
+            {
+                Title = "Work 6",
+                Content = "<p>Work 6</p>",
+                ImagePath = "Sprite_logo.png",
+                Category = Categories[3]
+            });
+            _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
+            {
+                Title = "Work 7",
+                Content = "<p>Work 7</p>",
+                ImagePath = "Sprite_logo.png",
+                Category = Categories[3]
+            });
+            _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
+            {
+                Title = "Work 8",
+                Content = "<p>Work 8</p>",
+                ImagePath = "Sprite_logo.png",
+                Category = Categories[3]
             });
 
             _db.AddWorkILike(new WorkILike()
@@ -101,7 +137,7 @@ using MattBaines.Data;
                 Title = "Is Contador’s Disfigured Reputation, Irreparable?",
                 Course = "MA Falmouth",
                 Year = "2011",
-                Summary = "In the media glare of the 21st century elite level Cycling and in particular doping has entered the spotlight like never before. This has led to more stringent doping tests and an increased penalty for even slight infringements. Particularly apt in light of Contador's two year ban, this article asks the question, can a cyclist recover from the ignominy that a doping allegation brings?"
+                Summary = "In the media glare of the 21st centu.ry elite level Cycling and in particular doping has entered the spotlight like never before. This has led to more stringent doping tests and an increased penalty for even slight infringements. Particularly apt in light of Contador's two year ban, this article asks the question, can a cyclist recover from the ignominy that a doping allegation brings?"
             });
 
             // Init Users and Roles

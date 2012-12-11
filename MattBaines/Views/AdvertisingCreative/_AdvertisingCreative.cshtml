@@ -11,14 +11,14 @@
 </ul>*@
 <div class="clear"></div>
 
-    @foreach (var category in Model.Categories.OrderBy(x => x.Id))
-    {<div class="ac_category @category.Name.Replace(" ", "_")">
-      <h4>@category.Name</h4>
+    @foreach (var category in Model.Categories.OrderBy(x => x.SortOrder))
+    {<div class="ac_category @category.Name.Replace(" ", "_") @if(category.Objects.Count == 1) { <text>ac_object_small</text> }">
+      <img src="/Content/images/AdvertisingCreative/@category.ImagePath" alt="@category.Name" class="category_img" />
       <div class="@(category.Name.Replace(" ", "_"))_items @if(category.Objects.Count >1) { <text>ac_object_list</text> }">
 	    <ul>
             @foreach (var ACobject in Model.Objects.Where(x => x.CategoryId == category.Id).OrderBy(x => x.CategoryId))
             {
-                <li><a href="@Url.Action("Details", new { ID = ACobject.Id })"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
+                <li><a href="@Url.Action("Details", "AdvertisingCreative", new { ID = ACobject.Id })"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
             }
         </ul>
       </div>

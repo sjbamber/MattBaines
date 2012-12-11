@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var controller_name = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-    var action_name = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();    
+    var controller_name = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower();
+    var action_name = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().ToLower();    
 }
 @section StyleSheet {
     @RenderSection("StyleSheet", required: false)
@@ -25,11 +25,19 @@
         <div id="title">
             <a href="/"><img src="@Url.Content("~/Content/images/Title.png")" alt="Matt Baines" /></a>
         </div>    
+        <div id="menucontainer">
+            <div id="menucontainer_content">    
+                <ul id="menu">
+                    <li @if (controller_name == "advertisingcreativecategory") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative Categories", "Index", "AdvertisingCreativeCategory")</li>
+                    <li @if (controller_name == "advertisingcreativeobject") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative Articles", "Index", "AdvertisingCreativeObject")</li>
+                    <li @if (controller_name == "workilike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "List", "WorkILike")</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div id="main">
             <div id="admin_content">
             <h4 class="float">@ViewBag.Title</h4>
-            <div class="clear"></div>
                 @RenderBody()
             </div>
     </div>

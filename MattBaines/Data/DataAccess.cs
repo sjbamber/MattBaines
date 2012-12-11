@@ -181,5 +181,20 @@ namespace MattBaines.Data
                 return false;
             }
         }
+
+        public bool UpdateWorkILike(WorkILike wil)
+        {
+            try
+            {
+                WorkILike wiltoupdate = _db.WorkILikeEntries.Find(wil.Id);
+                _db.Entry(wiltoupdate).CurrentValues.SetValues(wil);
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
