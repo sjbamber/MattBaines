@@ -146,11 +146,16 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\gridNavigation.css" />
+    <Content Include="Content\images\AdvertisingCreative\BBH.png" />
     <Content Include="Content\images\AdvertisingCreative\coca-cola-logo.gif" />
+    <Content Include="Content\images\AdvertisingCreative\Momentum.png" />
     <Content Include="Content\images\AdvertisingCreative\paper-tear.png" />
+    <Content Include="Content\images\AdvertisingCreative\Proactive.png" />
     <Content Include="Content\images\AdvertisingCreative\Sprite_logo.gif" />
     <Content Include="Content\images\AdvertisingCreative\Sprite_logo.png" />
     <Content Include="Content\images\AdvertisingCreative\Sprite_logo_rip.png" />
+    <Content Include="Content\images\AdvertisingCreative\TBWA.png" />
+    <Content Include="Content\images\background.jpg" />
     <Content Include="Content\images\bg_thumb.jpg" />
     <Content Include="Content\images\dashboard\separation-line.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
