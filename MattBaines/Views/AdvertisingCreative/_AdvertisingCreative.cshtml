@@ -1,15 +1,14 @@
 ﻿@model MattBaines.Models.AdvertisingCreativeModel
-<div class="section_title">
+@*<div class="section_title">
     <p>Advertising Creative</p>
-    @*<a href="/"><img src="@Url.Content("~/Content/images/ac_heading.png")" alt="Matt Baines" /></a>*@
-</div>
+    <a href="/"><img src="@Url.Content("~/Content/images/ac_heading.png")" alt="Matt Baines" /></a>
+</div>*@
 @*<ul class="ACcategory_list">
 @foreach (var category in Model.Categories.OrderBy(x => x.Id))
 {
     <li><a href="#">@category.Name</a><div style="background-color:@category.Colour"></div></li>
 }
 </ul>*@
-<div class="clear"></div>
 
     @foreach (var category in Model.Categories.OrderBy(x => x.SortOrder))
     {<div class="ac_category @category.Name.Replace(" ", "_") @if(category.Objects.Count == 1) { <text>ac_object_small</text> }">

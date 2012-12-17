@@ -157,6 +157,7 @@
     <Content Include="Content\images\AdvertisingCreative\TBWA.png" />
     <Content Include="Content\images\background.jpg" />
     <Content Include="Content\images\bg_thumb.jpg" />
+    <Content Include="Content\images\contact.png" />
     <Content Include="Content\images\dashboard\separation-line.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />

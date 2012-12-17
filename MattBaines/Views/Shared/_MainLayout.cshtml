@@ -17,14 +17,13 @@
                 @*<a href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]">
                     @System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]
                 </a>*@
-                <a id="email" class="icon" href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]"></a>
-                <a id="twitter" class="icon" href="#"></a>
-                <a id="linkedin" class="icon" href="#"></a>
+                <a id="email" title="Email" class="icon" href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]"></a>
+                <a id="twitter" title="Twitter" class="icon" href="#"></a>
+                <a id="linkedin" title="Linked In" class="icon" href="#"></a>
+                <img src="@Url.Content("~/Content/images/contact.png")" alt="contact me"/>
+
             </div>
-        </div>
-        <div id="title">
-            <a href="/"><img src="@Url.Content("~/Content/images/Title.png")" alt="Matt Baines" /></a>
-        </div>    
+        </div>  
         @*<div id="menucontainer">
             <div id="menucontainer_head"></div>
             <div id="menucontainer_content">    
@@ -40,10 +39,20 @@
         </div>*@
     </div>
     <div id="main">
-            @*<h2>@ViewBag.Title</h2>
-            @Html.Partial("_LogOnPartial")
-            <div class="clear" style="padding-bottom: 20px;"></div>*@
-            @RenderBody()
+            <div id="sidebar">
+                <div id="title">
+                    <a href="/"><img src="@Url.Content("~/Content/images/Title.png")" alt="Matt Baines" /></a>
+                </div>  
+                <ul>
+                    <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative", "Index", "AdvertisingCreative")</li>
+                    <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "Index", "WorkILike")</li>
+                    <li><a href="http://mattbaines.blogspot.co.uk/" target="_blank">My Blog</a></li>
+                </ul>
+                @RenderSection("Sidebar", false)
+            </div>
+            <div id="content">
+                @RenderBody()
+            </div>
     </div>
     <div class="push"></div>
 </div>

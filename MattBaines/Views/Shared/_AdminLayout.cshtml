@@ -21,10 +21,11 @@
                 <a id="twitter" class="icon" href="#"></a>
                 <a id="linkedin" class="icon" href="#"></a>
             </div>
-        </div>
-        <div id="title">
+        </div>  
+    </div>
+            <div id="title">
             <a href="/"><img src="@Url.Content("~/Content/images/Title.png")" alt="Matt Baines" /></a>
-        </div>    
+        </div>
         <div id="menucontainer">
             <div id="menucontainer_content">    
                 <ul id="menu">
@@ -33,9 +34,9 @@
                     <li @if (controller_name == "workilike"){<text>class="selected"</text>}>@Html.ActionLink("Work I Like", "List", "WorkILike")</li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </div>   
     <div id="main">
+       
             <div id="admin_content">
             <h4 class="float">@ViewBag.Title</h4>
                 @RenderBody()

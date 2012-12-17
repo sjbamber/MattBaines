@@ -90,6 +90,6 @@ $(document).ready(function () {
     });
     Cufon.replace('#advertisingcreative h4', { fontFamily: 'THURSTON_erc' });
     Cufon.replace('#advertisingcreative .section_title p', { fontFamily: 'Sketch Block' });
-    Cufon.replace('#ac_details h2', { fontFamily: 'Sketch Block' });
+    Cufon.replace('#main #sidebar ul li a', { fontFamily: 'THURSTON_erc' });
 });
 

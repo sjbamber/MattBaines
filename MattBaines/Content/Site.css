@@ -80,16 +80,23 @@ header, #header {
     color: #000;
     padding: 0;
     width: 100%;
+    height: 105px;
 }
 
 #headercontainer {
     width:100%;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 #headercontainerinner {
-    width: 156px;
+    width: 950px;
     margin: 0 auto;
+}
+
+#headercontainerinner img {
+    float: left;
+    margin-left: 20px;
+    display: block;
 }
 
 #headercontainerinner a {
@@ -127,6 +134,7 @@ header, #header {
 {
     width: 995px;
     margin: 0 auto;
+    clear: both;
 }
 
 footer, 
@@ -190,36 +198,24 @@ ul#menu li a:hover, ul#menu li.selected a
 
 #main #sidebar
 {
-
+    float:left;
     width: 220px;
     padding: 10px;
-    background: whiteSmoke;
-    /*background: #EAF0F6 url('./images/dashboard/separation-line.png') right 0px repeat-y;*/
-    -webkit-box-shadow: 5px 0px 5px rgba(70, 70, 70, 0.5);
-    -moz-box-shadow:    5px 0px 5px rgba(70, 70, 70, 0.5);
-    box-shadow:         5px 0px 5px rgba(70, 70, 70, 0.5);
-    border-right: 1px dashed #CCC;
     min-height: 500px;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
-    z-index:9999;    
+    z-index:9999; 
 }
 
-#main #container
+#main #content
 {
-    margin: 15px;
-    padding:20px;
-    background: whiteSmoke;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
-    -moz-box-shadow:    5px 5px 5px rgba(70, 70, 70, 0.5);
-    box-shadow:         5px 5px 5px rgba(70, 70, 70, 0.5);
+    float:left;
+    width: 755px;
 }
 
 #main #sidebar ul
 {
     list-style-type: none;
+    margin-left: 5px;
 }
 
 #main #sidebar ul li
@@ -227,25 +223,17 @@ ul#menu li a:hover, ul#menu li.selected a
     display: block;
     height: 35px;
     padding: 0 10px 0 10px;
-    border-bottom: 1px solid #CCC;
     margin-right: 1px;
     font-weight: bold;
 }
 
 #main #sidebar ul li.selected {
-    background: #d8dfea;
     color: #666;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 #main #sidebar ul li:hover
 {
-    background: #f1f3f8;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    color: #666;
 }
 
 #main #sidebar ul li a
@@ -256,7 +244,7 @@ ul#menu li a:hover, ul#menu li.selected a
     color: #666;
     width: 100%;
     height: 100%;
-    text-transform: uppercase;
+    font-size: 3em;
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -505,9 +493,9 @@ label
 
 div#title {
     display: block;
-    padding-top: 115px;
-    padding-bottom: 60px;
-    text-align: left;  
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
 }
 
 div.section_title {
@@ -519,7 +507,7 @@ div#title a
 {
     display: block;
     height: 100%;
-    width: 700px;
+    width: 220px;
     margin: 0 auto;
 }
 
@@ -766,11 +754,11 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .ac_object_list
 {
-    margin: 0 0 0 -240px;
-    padding: 0 0 0 240px;
+    margin: 0 -170px 0 -70px;
+    padding: 0 170px 0 70px;
     background: url('images/paper-tear.png') transparent no-repeat;
     height: 680px;
-    width: 995px;
+    width: 735px;
 }
 
 #advertisingcreative h4 {
@@ -787,8 +775,8 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 .ac_object_list ul{
     list-style: none;
     position: relative;
-    top: 195px;
-    left: 0px;
+    top: 135px;
+    left: 60px;
     margin-left: 25px;
 }
 
@@ -813,7 +801,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .ac_category.BBH_Shanghai 
 {
-    margin-top: -70px;
+    margin-top: -40px;
 }
 
 .ac_category.Proactive_Work 
@@ -845,12 +833,12 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .ac_category.TBWA_London 
 {
-    margin-right: 150px;
+    margin-right: 10px;
 }
 
 .ac_category.TBWA_London, .ac_category.Momentum_Manchester
 {
-    margin-top: -150px;
+    margin-top: -200px;
 }
 
 #admin_content 
