@@ -34,7 +34,7 @@ namespace MattBaines.Controllers
                 Objects = _db.GetAllAdvertisingCreativeObjects(),
                 ACObject = _db.GetAdvertisingCreativeObjectByID(ID)
             };
-            return View(view_model);
+            return PartialView("_Details", view_model);
         }
 
     }

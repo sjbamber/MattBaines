@@ -12,7 +12,7 @@ body
 {
     position:absolute;
     background: url('/Content/images/background.jpg') #DEDCC3;
-    background-position:center top;
+    background-position: center top;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     color: #696969;
@@ -76,7 +76,7 @@ em
 
 header, #header {
     background: url('/Content/images/ornate_wallpaper.jpg') transparent;
-    background-position:center top;
+    background-position: center top;
     color: #000;
     padding: 0;
     width: 100%;
@@ -759,6 +759,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
     background: url('images/paper-tear.png') transparent no-repeat;
     height: 680px;
     width: 735px;
+    clear: both;
 }
 
 #advertisingcreative h4 {
@@ -809,12 +810,18 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
     margin-top: -40px;
 }
 
-.ac_category.BBH_Shanghai img.category_img, .ac_category.Proactive_Work img.category_img {
+.ac_category.BBH_Shanghai img.category_img {
     position: relative;
-    top: 120px;
-    left: 210px;
-    margin-left: -210px;
+    top: 100px;
+    float: right;
 }
+
+.ac_category.Proactive_Work img.category_img {
+    position: relative;
+    top: 100px;
+    float: left;
+}
+
 .ac_category {
     float: left;
 }

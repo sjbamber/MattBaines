@@ -17,7 +17,7 @@
 	    <ul>
             @foreach (var ACobject in Model.Objects.Where(x => x.CategoryId == category.Id).OrderBy(x => x.CategoryId))
             {
-                <li><a href="@Url.Action("Details", "AdvertisingCreative", new { ID = ACobject.Id })"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
+                <li><a href="@Url.Action("Details", "AdvertisingCreative", new { ID = ACobject.Id })" class = "fancybox_link fancybox.ajax"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
             }
         </ul>
       </div>
