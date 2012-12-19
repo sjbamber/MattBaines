@@ -89,7 +89,13 @@ $(document).ready(function () {
         return confirm('Are you sure?');
     });
     Cufon.replace('#advertisingcreative h4', { fontFamily: 'THURSTON_erc' });
-    Cufon.replace('#advertisingcreative .section_title p', { fontFamily: 'Sketch Block' });
+    Cufon.replace('#advertisingcreative .section_title p, #workilike', { fontFamily: 'Sketch Block' });
+    Cufon.replace('#workilike', { fontFamily: 'Sketch Block',
+        hover: true
+    });
+    Cufon.replace('#workilike p a', { fontFamily: 'Sketch Block',
+        hover: { color: 'red' }
+    });
     Cufon.replace('#main #sidebar ul li a', { fontFamily: 'THURSTON_erc' });
 });
 

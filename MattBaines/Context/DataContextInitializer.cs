@@ -53,16 +53,16 @@ using MattBaines.Data;
 
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 1",
+                Title = "Sprite",
                 Content = "<p>Work 1</p>",
                 ImagePath = "Sprite_logo.png",
                 Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 2",
-                Content = "<p>Work 2</p>",
-                ImagePath = "Sprite_logo.png",
+                Title = "Ice Dew",
+                Content = "<p>Ice Dew</p>",
+                ImagePath = "icedew.png",
                 Category = Categories[0]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
@@ -74,9 +74,21 @@ using MattBaines.Data;
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 4",
-                Content = "<p>Work 4</p>",
-                ImagePath = "Sprite_logo_rip.png",
+                Title = "Army",
+                Content = string.Concat("<p><img src=\"../../Content/images/AdvertisingCreative/ArmyCareer.jpg\" border=\"0\" /></p>",
+                                        "<p><span style=\"font-size: large; text-decoration: underline;\"><strong>Soldier Begin!!</strong>",
+                                        "</span><br /><span style=\"font-size: large;\">School&rsquo;s over, now it&rsquo;s time for your real ",
+                                        "assessment with a career as a soldier. </span><span style=\"font-size: large;\">In the army caving is ",
+                                        "seen as the perfect test of a soldier&rsquo;s resolve. By negotiating </span><span style=\"font-size: large;\">",
+                                        "pitches, squeezes and underground water the same cool head you used to ace that </span><span style=\"font-size: large;\">",
+                                        "big exam will again be pushed to the limit. Find out more about this from an </span><span style=\"font-size: large;\">",
+                                        "experienced soldier. </span><br /> <br /><span style=\"font-size: large;\"><strong><span style=\"text-decoration: underline;\">",
+                                        "Get Inside the Action</span></strong></span><br /><span style=\"font-size: large;\">In this issue you&rsquo;ll ",
+                                        "learn about the bugle sounded at the charge of the light brigade, </span><span style=\"font-size: large;\">and find ",
+                                        "out why Lieutenant-General Sir Adrian Carton de Wiart is considered one </span><span style=\"font-size: large;\">of ",
+                                        "the most remarkable soldiers in British History.</span><span>&nbsp;&nbsp;</span><span style=\"font-size: large;\">",
+                                        "Start the search for your new career now. Go to&nbsp;<a href=\"http://www.armyjobs.mod.uk\" target=\"_blank\">www.armyjobs.mod.uk</a></span></p>"),
+                ImagePath = "british-army-logo.png",
                 Category = Categories[1]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
@@ -88,23 +100,23 @@ using MattBaines.Data;
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 6",
-                Content = "<p>Work 6</p>",
-                ImagePath = "Sprite_logo.png",
+                Title = "The Dishwasher Conundrum",
+                Content = "<p><img src=\"../../Content/images/AdvertisingCreative/DishwasherConundrum.jpg\" border=\"0\"/></p>",
+                ImagePath = "Dishwasher.png",
                 Category = Categories[3]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 7",
+                Title = "Oxfam",
                 Content = "<p>Work 7</p>",
-                ImagePath = "Sprite_logo.png",
+                ImagePath = "oxfam.jpg",
                 Category = Categories[3]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 8",
-                Content = "<p>Work 8</p>",
-                ImagePath = "Sprite_logo.png",
+                Title = "Play It!",
+                Content = "<p>BRIEF Play It - Increase the awareness of Play It’s extensive range of games to hire or rent.</p>",
+                ImagePath = "playit.png",
                 Category = Categories[3]
             });
 
