@@ -770,7 +770,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 .ac_object_list
 {
     margin: 0 0 0 -140px;
-    padding: 0 0 0 140px;
+    padding: 0 0 0 120px;
     background: url('images/paper-tear.png') transparent no-repeat;
     height: 680px;
     width: 735px;
@@ -791,22 +791,23 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 .ac_object_list ul{
     list-style: none;
     position: relative;
-    top: 135px;
+    top: 90px;
     left: 0px;
     margin-left: 25px;
 }
 
 .ac_object_list li{
-    margin-right: 15px;
+    margin-right: 0px;
     float: left;
 }
 
 .ac_object_list li:first-child{
-    margin-top: 20px;
+    margin-top: 55px;
 }
 
 .ac_object_list li:last-child{
-    margin-top: 35px;
+    margin-top: 55px;
+    margin-left: -20px;
 }
 
 .ac_object_list li img:hover{
@@ -827,8 +828,8 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .ac_category.BBH_Shanghai img.category_img {
     position: relative;
-    top: 100px;
-    float: right;
+    top: 80px;
+    left: 230px;
 }
 
 .ac_category.Proactive_Work img.category_img {
@@ -845,6 +846,8 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 {
     width: 350px;
     text-align: center;
+    position: relative;
+    right: 220px;
 }
 
 .ac_object_small h4
@@ -860,7 +863,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .ac_category.TBWA_London, .ac_category.Momentum_Manchester
 {
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 #admin_content 
@@ -871,4 +874,15 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
     border-radius: 10px;
     padding:10px 20px 20px 20px;
     margin: 10px;
+}
+
+.TBWA_London_items, .Momentum_Manchester_items {
+    position: relative;
+    z-index: 1;
+    margin-top: -35px;
+}
+
+.ac_object_small img{
+    position: relative;
+    z-index: 999;
 }

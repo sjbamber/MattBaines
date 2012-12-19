@@ -93,9 +93,9 @@ using MattBaines.Data;
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
-                Title = "Work 5",
+                Title = "Oats & More",
                 Content = "<p>Work 5</p>",
-                ImagePath = "Sprite_logo_rip.png",
+                ImagePath = "OatsAndMore.png",
                 Category = Categories[2]
             });
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
