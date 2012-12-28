@@ -34,7 +34,7 @@ footer,
     clear: both;
     height: 50px;
     position: relative;
-    z-index:1999;
+    z-index:1999; 
 }
 #footer-content {
     height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
