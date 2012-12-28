@@ -98,7 +98,7 @@ using MattBaines.Data;
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Oats & More",
-                Content = "<p>Work 5</p>",
+                Content = "<p><img src=\"../../Content/images/AdvertisingCreative/OatsAndMore.jpg\" border=\"0\" /></p>",
                 ImagePath = "OatsAndMore.png",
                 Category = Categories[2],
                 SortOrder = 1
@@ -114,7 +114,7 @@ using MattBaines.Data;
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Oxfam",
-                Content = "<p>Work 7</p>",
+                Content = "<p><img src=\"../../Content/images/AdvertisingCreative/oxfam.jpg\" border=\"0\"/></p>",
                 ImagePath = "oxfam.png",
                 Category = Categories[3],
                 SortOrder = 3
@@ -122,7 +122,7 @@ using MattBaines.Data;
             _db.AddAdvertisingCreativeObject(new AdvertisingCreativeObject()
             {
                 Title = "Play It!",
-                Content = "<p>BRIEF Play It - Increase the awareness of Play It’s extensive range of games to hire or rent.</p>",
+                Content = "<p><img src=\"../../Content/images/AdvertisingCreative/playit.jpg\" border=\"0\" /></p>",
                 ImagePath = "playit.png",
                 Category = Categories[3],
                 SortOrder = 1
