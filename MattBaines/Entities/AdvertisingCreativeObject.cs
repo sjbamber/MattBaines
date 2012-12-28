@@ -21,6 +21,9 @@ using System.Web.Mvc;
 
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+
+        [Required]
+        public int SortOrder { get; set; }
         public string ImagePath { get; set; }
 
         [Required]

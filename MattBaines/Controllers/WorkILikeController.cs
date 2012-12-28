@@ -26,10 +26,10 @@ namespace MattBaines.Controllers
         {
             WorkILikeModel view_model = new WorkILikeModel()
             {
-                workILikeObject = _db.GetWorkILikeObjectByID(ID),
-                WorkILikeEntries = _db.GetAllWorkILikeObjects()
+                workILikeObject = _db.GetWorkILikeObjectByID(ID)
             };
-            return View(view_model);
+            return PartialView("_Details", view_model);
+            //return View(view_model);
         }
 
         [Authorize]

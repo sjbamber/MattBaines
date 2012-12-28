@@ -185,6 +185,7 @@
     <Content Include="Content\images\ornate_wallpaper.jpg" />
     <Content Include="Content\images\padlock-locked-icon.png" />
     <Content Include="Content\images\paper-tear.png" />
+    <Content Include="Content\images\paper-tear2.png" />
     <Content Include="Content\images\prev.png" />
     <Content Include="Content\images\runner.png" />
     <Content Include="Content\images\section-main.jpg" />
@@ -621,6 +622,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\AdvertisingCreative\_Details.cshtml" />
+    <Content Include="Views\WorkILike\_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

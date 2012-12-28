@@ -3,6 +3,6 @@
 @foreach (var WILobject in Model)
 {
     <div class="WorkILikeEntry">
-        <p><a href="@Url.Action("Details", new { ID = WILobject.Id })" style="display:inline-block;">@WILobject.Title</a><div>@WILobject.Course - @WILobject.Year</div></p>
+        <p><a class = "fancybox_link fancybox.ajax" href="@Url.Action("Details", new { ID = WILobject.Id })" style="display:inline-block;">@WILobject.Title</a><div>@WILobject.Course - @WILobject.Year</div></p>
     </div>
 }

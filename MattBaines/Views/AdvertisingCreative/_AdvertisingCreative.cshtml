@@ -15,7 +15,7 @@
       <img src="/Content/images/AdvertisingCreative/@category.ImagePath" alt="@category.Name" class="category_img" />
       <div class="@(category.Name.Replace(" ", "_"))_items @if(category.Objects.Count >1) { <text>ac_object_list</text> }">
 	    <ul>
-            @foreach (var ACobject in Model.Objects.Where(x => x.CategoryId == category.Id).OrderBy(x => x.CategoryId))
+            @foreach (var ACobject in Model.Objects.Where(x => x.CategoryId == category.Id).OrderBy(x => x.SortOrder))
             {
                 <li><a href="@Url.Action("Details", "AdvertisingCreative", new { ID = ACobject.Id })" class = "fancybox_link fancybox.ajax"><img src="/Content/images/AdvertisingCreative/@ACobject.ImagePath" alt="@ACobject.ImagePath" /></a></li>
             }

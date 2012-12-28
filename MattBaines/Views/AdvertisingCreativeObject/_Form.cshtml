@@ -27,6 +27,10 @@
         </div>
     </div>
     <div class="divRowWrapper">
+            @Html.LabelFor(model => model.SortOrder, "Sort Order")
+            @Html.TextBoxFor(model => model.SortOrder)
+    </div>
+    <div class="divRowWrapper">
             @Html.LabelFor(model => model.ImagePath, "Image Path")
             @Html.TextBoxFor(model => model.ImagePath)
     </div>

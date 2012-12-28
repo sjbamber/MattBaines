@@ -27,8 +27,8 @@
                     @System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]
                 </a>*@
                 <a id="email" title="Email" class="icon" href="mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["EmailAddress"]"></a>
-                <a id="twitter" title="Twitter" class="icon" href="#"></a>
-                <a id="linkedin" title="Linked In" class="icon" href="#"></a>
+                <a id="twitter" title="Twitter" class="icon" href="http://twitter.com/intent/user?screen_name=mattrbaines" target="_blank"></a>
+                <a id="linkedin" title="Linked In" class="icon" href="http://www.linkedin.com/pub/matt-baines/1a/7b/570" target="_blank"></a>
                 <img src="@Url.Content("~/Content/images/contact.png")" alt="contact me"/>
 
             </div>
@@ -56,6 +56,7 @@
                     <li @if (controller_name == "AdvertisingCreative") {<text>class="selected"</text>}>@Html.ActionLink("Advertising Creative", "Index", "AdvertisingCreative")</li>
                     <li @if (controller_name == "WorkILike"){<text>class="selected"</text>}>@Html.ActionLink("Other Work", "Index", "WorkILike")</li>
                     <li><a href="http://mattbaines.blogspot.co.uk/" target="_blank">My Blog</a></li>
+                    <li><a href="http://thebackdroptoadventure.tumblr.com/" target="_blank">Backdrop to Adventure</a></li>
                 </ul>
                 @RenderSection("Sidebar", false)
             </div>

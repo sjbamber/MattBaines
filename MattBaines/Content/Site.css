@@ -31,9 +31,10 @@ body
 footer, 
 #footer 
 {
+    clear: both;
     height: 50px;
     position: relative;
-    z-index:9999;
+    z-index:1999;
 }
 #footer-content {
     height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
@@ -200,7 +201,7 @@ ul#menu li a:hover, ul#menu li.selected a
 {
     float:left;
     width: 235px;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     min-height: 500px;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
     z-index:9999; 
@@ -221,19 +222,22 @@ ul#menu li a:hover, ul#menu li.selected a
 #main #sidebar ul li
 {
     display: block;
-    height: 35px;
-    padding: 0 10px 0 10px;
+    padding: 15px 10px 10px 5px;
     margin-right: 1px;
     font-weight: bold;
 }
 
-#main #sidebar ul li.selected {
-    color: #666;
+#main #sidebar ul li cufon{
+    height: 25px !important;
 }
 
-#main #sidebar ul li:hover
+#main #sidebar ul li cufon canvas{
+    top: 0px !important;
+}
+
+#main #sidebar ul li a:hover
 {
-    color: #666;
+    border-bottom: 5px solid #CD524E;
 }
 
 #main #sidebar ul li a
@@ -245,6 +249,11 @@ ul#menu li a:hover, ul#menu li.selected a
     width: 100%;
     height: 100%;
     font-size: 3.5em;
+    border-bottom: 5px solid transparent;
+}
+
+#main #sidebar ul li.selected a {
+    color: #CD524E;
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -767,12 +776,22 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 }
 
 
-.ac_object_list
+.BBH_Shanghai_items.ac_object_list
 {
     margin: 0 0 0 -140px;
     padding: 0 0 0 120px;
     background: url('images/paper-tear.png') transparent no-repeat;
     height: 680px;
+    width: 735px;
+    clear: both;
+}
+
+.Proactive_Work_items.ac_object_list
+{
+    margin: 0 0 0 -240px;
+    padding: 0 0 0 340px;
+    background: url('images/paper-tear2.png') transparent no-repeat;
+    height: 450px;
     width: 735px;
     clear: both;
 }
@@ -801,11 +820,15 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
     float: left;
 }
 
-.ac_object_list li:first-child{
+.Proactive_Work_items.ac_object_list li:first-child{
+    margin-top: 15px;
+}
+
+.BBH_Shanghai_items.ac_object_list li:first-child{
     margin-top: 55px;
 }
 
-.ac_object_list li:last-child{
+.BBH_Shanghai_items.ac_object_list li:last-child{
     margin-top: 55px;
     margin-left: -20px;
 }
