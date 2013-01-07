@@ -830,7 +830,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 
 .BBH_Shanghai_items.ac_object_list li:last-child{
     margin-top: 55px;
-    margin-left: -20px;
+    margin-left: 20px;
 }
 
 .ac_object_list li img:hover{
